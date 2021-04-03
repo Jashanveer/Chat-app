@@ -14,10 +14,12 @@ input {
     font-size: 14px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
 body {
     line-height: 1.4;
     color: #333333;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
