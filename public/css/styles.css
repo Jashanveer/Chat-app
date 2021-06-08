@@ -38,6 +38,9 @@ input {
     padding: 12px;
     outline: none;
 }
+#intro{
+    font-size: 15px;
+}
 
 button {
     cursor: pointer;
@@ -64,6 +67,7 @@ button:disabled {
     background: #333744;
     background-image: url('../img/W1.jpg');
     width: 100vw;
+    background-size:cover;
     height: 100vh;   
     display: flex;
     justify-content: center;
@@ -77,28 +81,73 @@ button:disabled {
     width: 250px;
     border-radius: 1em;
 }
-
 .centered-form__box h1{
     color: #6b47b8;
     text-align: center;
     
 }
 
+
 .centered-form button {
     width: 100%;
     border-radius: 1em;
+    margin-top: 20px;
 }
 
 .centered-form input {
-    margin-bottom: 16px;
     width: 100%;
     border-radius: 1em;
     border: 2px solid white;
-    color: #777
+    background: white;
+    color: #6b47b8;
+    margin-bottom: 10px;
 }
+
 .centered-form input:hover{
-    border: 2px solid #6b47b8
+    border: 2px solid #6b47b8;
+} 
+
+.centered-form input:focus{
+    border: 2px solid #6b47b8;
+    background-color: #F7F7FA;
+} 
+
+
+
+.form-group{margin-top: 20px}
+
+.form-group{position: relative;}
+.form-control{height: 40px;}
+.form-control:focus{box-shadow: none;}
+
+label{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: normal;
+    transition: all 0.3s;
 }
+
+.form-control:focus ~ label{
+    left: 5px;
+    top: -10px;
+    background: #F7F7FA;
+    color: #6b47b8;
+    padding: 0 5px;
+}
+
+label.active{
+    left: 5px;
+    top: -10px;
+    background: #F7F7FA;
+    padding: 0 5px;
+}
+
+.val{
+    border: 2px solid red;
+    background: rgb(252, 225, 225);
+}
+
 
 /* Chat Page Layout */
 

@@ -6,10 +6,12 @@ const $messageInput = document.querySelector('input')
 const $messageFormButton = document.querySelector('button')
 const $sendLocationButton = document.querySelector('#send-location')
 const $messages = document.querySelector('#messages')
+
 // Templates
 const messageTemplate = document.querySelector('#message-template').innerHTML
 const locationTemplate = document.querySelector('#location-template').innerHTML
 const sidebarTempleate = document.querySelector('#sidebar-template').innerHTML
+
 //options
 const {username, room} = Qs.parse(location.search, {ignoreQueryPrefix: true})
 
@@ -43,7 +45,7 @@ socket.on('message', (message)=>{
         message: message.text,
         createdAt: moment(message.createdAt).format('h:mm a')
     })
-    $messages.insertAdjacentHTML('beforeend', html)
+    $messages.insertAdjacentHTML('beforeend', html) // inserting the messages
     autoscroll()
     
 })
